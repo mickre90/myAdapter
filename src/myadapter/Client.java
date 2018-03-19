@@ -5,6 +5,7 @@
  */
 package myadapter;
 
+import nfzManagers.IValidInformation;
 import nfzModel.ValidInformation;
 
 /**
@@ -28,6 +29,8 @@ public class Client {
         
         /* Adapter */
         //...
+        IValidInformation vi = new ValidInformation();
+        INFZValidInformationAdapter adapt = new NFZValidInformationAdapter(vi);
         
         /* System */
         client.DoSomethingImportant1();
